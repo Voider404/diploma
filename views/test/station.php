@@ -5,9 +5,9 @@ use yii\helpers\Html;
 <table  class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">Название станции</th>
-      <th scope="col">Информация</th>
-     
+      <th scope="col">Событие</th>
+      <th scope="col">Место проведения</th>
+     <th scope="col">Дата проведения</th>
     </tr>
   </thead>
   <tbody>
@@ -17,6 +17,7 @@ foreach($model as $station):
 <tr>
 <td><?=$station->name?></td>
 <td><?=$station->info?></td>
+<td><?=$station->date?></td>
 
 
 <?php

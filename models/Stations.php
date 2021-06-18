@@ -45,38 +45,7 @@ class Stations extends \yii\db\ActiveRecord
             'id' => 'ID',
             'name' => 'Name',
             'info' => 'Info',
+            'date' => 'Date',
         ];
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTimetables()
-    {
-        return $this->hasMany(Timetable::className(), ['id_station' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTimetables0()
-    {
-        return $this->hasMany(Timetable::className(), ['next_stay' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTrains()
-    {
-        return $this->hasMany(Train::className(), ['id_station_start' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTrains0()
-    {
-        return $this->hasMany(Train::className(), ['id_station_end' => 'id']);
     }
 }
