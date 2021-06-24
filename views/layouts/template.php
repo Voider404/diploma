@@ -34,7 +34,7 @@ AppAsset::register($this);
 <?php $this->beginBody() ?>
 
 <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
-  <a class="navbar-brand" href="<?php echo Url::toRoute('/test/glav');?>"><font size="5" color="white" face="Arial">SPB Maps</font></a>
+  <a class="navbar-brand" href="<?php echo Url::toRoute('/test/glav');?>"><font size="5" color="navy" face="Arial">SPB Maps</font></a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
   <span class="navbar-toggler-icon"></span>
   </button>
@@ -42,15 +42,11 @@ AppAsset::register($this);
   <div class="collapse navbar-collapse" id="navbarColor01">
     <ul class="navbar-nav mr-auto">
         <li class="nav-item">
-            <a class="nav-link" href="<?php echo Url::toRoute('/test/station');?>">События</a>
+            <a class="nav-link" href="<?php echo Url::toRoute('/test/station');?>">Мероприятия</a>
         </li>
-        <?php 
-        if (\app\models\User::findOne(Yii::$app->user->id == 1)->password == '$2y$13$kjnIHfWzfq/aTv8glhYnL.T3OK97JPnZ1Zt1acl3aOGc2qOmhTTAG') {
-  echo Html::tag("a", "События", ["class"=>"nav-link","href"=>Url::toRoute('/test/station')]);
-}
-?>
+
               <li class="nav-item">
-        <a class="nav-link" href="<?php echo Url::toRoute('/test/train');?>">Мероприятия</a>
+        <a class="nav-link" href="<?php echo Url::toRoute('/test/train');?>">События</a>
         </li>
       </ul>
       <ul class="navbar-nav justify-content-end">

@@ -5,7 +5,7 @@ use yii\helpers\Html;
 <table  class="table table-hover">
   <thead>
     <tr>
-      <th scope="col">Событие</th>
+      <th scope="col">Мероприятие</th>
       <th scope="col">Место проведения</th>
      <th scope="col">Дата проведения</th>
     </tr>
@@ -21,8 +21,8 @@ foreach($model as $station):
 
 
 <?php
-if (\app\models\User::findOne(Yii::$app->user->id)->password == '$2y$13$kjnIHfWzfq/aTv8glhYnL.T3OK97JPnZ1Zt1acl3aOGc2qOmhTTAG') { //  If there is a user with a certain password
-  echo Html::tag("td", Html::tag("a", "Убрать станцию", ["class"=>"btn btn-primary","href"=>Url::toRoute('test/dele?id=' . $station->id),]));
+if (\app\models\User::findOne(Yii::$app->user->id)->password == '$2y$13$XcpWnuGdNTn6GoSx0FdnYeBRFwXg3HV2abWZdZOMFvLUklDFrnri2') { //  If there is a user with a certain password
+  echo Html::tag("td", Html::tag("a", "Убрать мероприятие", ["class"=>"btn btn-primary","href"=>Url::toRoute('test/delete?id=' . $station->id),]));
   echo Html::tag("td", Html::tag("a", "Ред.", ["class"=>"btn btn-primary","href"=>Url::toRoute('test/issus3red?id=' . $station->id),]));
 }
 ?>
@@ -33,5 +33,5 @@ endforeach;
 </tbody>
 </table>
 <?php
-if (\app\models\User::findOne(Yii::$app->user->id)->password == '$2y$13$kjnIHfWzfq/aTv8glhYnL.T3OK97JPnZ1Zt1acl3aOGc2qOmhTTAG') { //  If there is a user with a certain password
-  echo Html::tag("a", "Добавить станцию", ["class"=>"btn btn-primary","href"=>Url::toRoute('test/issus3')]);} ?>
+if (\app\models\User::findOne(Yii::$app->user->id)->password == '$2y$13$XcpWnuGdNTn6GoSx0FdnYeBRFwXg3HV2abWZdZOMFvLUklDFrnri2') { //  If there is a user with a certain password
+  echo Html::tag("a", "Добавить мероприятие", ["class"=>"btn btn-primary","href"=>Url::toRoute('test/issus3')]);} ?>

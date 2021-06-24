@@ -23,7 +23,7 @@ class Train extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'train';
+        return 'events';
     }
 
     /**
@@ -33,9 +33,7 @@ class Train extends \yii\db\ActiveRecord
     {
         return [
             [['number', 'navigate'], 'required'],
-            [['type_id'], 'integer'],
             [['number', 'navigate'], 'string', 'max' => 100],
-            [['type_id'], 'exist', 'skipOnError' => true, 'targetClass' => TrainType::className(), 'targetAttribute' => ['type_id' => 'id']],
         ];
     }
 
@@ -47,7 +45,6 @@ class Train extends \yii\db\ActiveRecord
         return [
             'id' => 'ID',
             'number' => 'Number',
-            'type_id' => 'Type ID',
             'navigate' => 'Navigate',
         ];
     }
@@ -60,19 +57,4 @@ class Train extends \yii\db\ActiveRecord
         return $this->hasMany(Description::className(), ['id_train' => 'id']);
     }
 
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getTimetables()
-    {
-        return $this->hasMany(Timetable::className(), ['id_train' => 'id']);
-    }
-
-    /**
-     * @return \yii\db\ActiveQuery
-     */
-    public function getType()
-    {
-        return $this->hasOne(TrainType::className(), ['id' => 'type_id']);
-    }
 }

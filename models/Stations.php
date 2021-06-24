@@ -23,7 +23,7 @@ class Stations extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'stations';
+        return 'mero';
     }
 
     /**
@@ -43,9 +43,9 @@ class Stations extends \yii\db\ActiveRecord
     {
         return [
             'id' => 'ID',
-            'name' => 'Name',
-            'info' => 'Info',
-            'date' => 'Date',
+            'name' => 'Название мероприятия',
+            'info' => 'Место проведения',
+            'date' => 'Дата проведения',
         ];
     }
 }

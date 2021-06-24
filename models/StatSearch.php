@@ -19,6 +19,8 @@ class StatSearch extends Stations
         return [
             [['id'], 'integer'],
             [['name'], 'safe'],
+            [['info'], 'safe'],
+            [['date'], 'safe'],
         ];
     }
 

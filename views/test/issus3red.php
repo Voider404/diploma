@@ -12,9 +12,9 @@ use yii\helpers\Html;
 'options' => ['id'=>"myform"],
 ]) ?>
 
-<?= $form->field($model, 'name')->label('Название станции') ?>
-<?= $form->field($model, 'info')->label('Инфо')?>
-
+<?= $form->field($model, 'name')->label('Название мероприятия') ?>
+<?= $form->field($model, 'info')->label('Место проведения') ?>
+<?= $form->field($model, 'date')->label('Дата проведения') ?>
 
 
 
